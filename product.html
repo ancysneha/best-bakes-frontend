@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+
+  <style>
+    .product-container {
+      width: 80%;
+      margin: 40px auto;
+      display: flex;
+      gap: 30px;
+    }
+    .product-img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff3e6c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="product-container">
+    <img id="productImage" class="product-img">
+
+    <div>
+      <h2 id="productName"></h2>
+      <p id="productDescription"></p>
+      <h3 id="productPrice"></h3>
+      <button id="addToCartBtn" type="button">Add to Cart</button>
+      <p id="productStatus"></p>
+    </div>
+  </div>
+
+<script>
+let currentProduct = null;
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get("id");
+
+  console.log("Product ID:", productId);
+
+  if (!productId) {
+    alert("No product id in URL");
+    return;
+  }
+
+  fetch(`https://best-bakes-backend-1.onrender.com/api/products/${productId}`)
+    .then(res => res.json())
+    .then(product => {
+      console.log("Product fetched:", product);
+
+      currentProduct = product;
+
+      document.getElementById("productImage").src = "./" + product.image;
+
+      document.getElementById("productName").innerText = product.name;
+      document.getElementById("productDescription").innerText = product.description;
+      document.getElementById("productPrice").innerText = "₹" + product.price;
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Product not found");
+    });
+
+  document.getElementById("addToCartBtn").addEventListener("click", () => {
+    if (!currentProduct) {
+      alert("Product not loaded yet");
+      return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+      _id: currentProduct._id,
+      name: currentProduct.name,
+      price: currentProduct.price,
+      image: currentProduct.image
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    document.getElementById("productStatus").innerText = "✓ Added to cart";
+    console.log("Cart saved:", cart);
+  });
+
+});
+</script>

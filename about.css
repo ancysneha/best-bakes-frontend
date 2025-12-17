@@ -1,0 +1,84 @@
+#about img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(241, 6, 143, 0.4);
+    transition: transform 0.4s ease;
+  }
+  
+  #about img:hover {
+    transform: scale(1.03);
+  }
+  
+  #about p {
+    color: rgb(238, 162, 215);
+    line-height: 1.7;
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  #bt button {
+    margin-top: 20px;
+    background-color: rgb(241, 6, 143);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #bt button:hover {
+    background-color: rgb(200, 5, 120);
+  }
+  
+  
+  #values .col-md-4 {
+    margin-bottom: 30px;
+    transition: transform 0.4s ease;
+  }
+  
+  #values .col-md-4:hover {
+    transform: translateY(-10px);
+  }
+  
+  #values i {
+    margin-bottom: 15px;
+  }
+  
+  
+  #team img {
+    border: 4px solid rgb(241, 6, 143);
+    transition: transform 0.3s ease;
+  }
+  
+  #team img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  #process .col-md-3 {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px dashed rgb(241, 6, 143);
+  }
+  
+  #process .col-md-3:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(241, 6, 143, 0.5);
+  }
+  
+  
+  #reviews p {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid rgb(241, 6, 143);
+    transition: background-color 0.3s ease;
+  }
+  
+  #reviews p:hover {
+    background-color: #282828;
+  }

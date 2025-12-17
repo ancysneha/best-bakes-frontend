@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form - Sweet Cravings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: palevioletred;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: palevioletred;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #d75496;
+    }
+
+    #contactStatus {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="contact">
+    <h1>CONTACT US</h1>
+
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" id="usr" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label for="eml">Email:</label>
+      <input type="email" id="eml" placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label for="phn">Phone:</label>
+      <input type="number" id="phn" placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Message:</label>
+      <textarea rows="4" id="comment" placeholder="Your message here..."></textarea>
+    </div>
+
+    <div>
+      <button id="submitContact">Send Message</button>
+    </div>
+
+    <div id="contactStatus"></div>
+  </div>
+
+  <script>
+    document.getElementById("submitContact").addEventListener("click", function () {
+      const name = document.getElementById("usr").value.trim();
+      const email = document.getElementById("eml").value.trim();
+      const phone = document.getElementById("phn").value.trim();
+      const message = document.getElementById("comment").value.trim();
+
+      if (!name || !email || !phone || !message) {
+        alert("Please fill in all fields!");
+        return;
+      }
+
+      const contactData = { name, email, phone, message };
+      const existingData = JSON.parse(localStorage.getItem("contactMessages")) || [];
+      existingData.push(contactData);
+      localStorage.setItem("contactMessages", JSON.stringify(existingData));
+
+      document.getElementById("contactStatus").textContent = "Message submitted successfully!";
+      document.getElementById("usr").value = "";
+      document.getElementById("eml").value = "";
+      document.getElementById("phn").value = "";
+      document.getElementById("comment").value = "";
+    });
+  </script>
+</body>
+</html>
