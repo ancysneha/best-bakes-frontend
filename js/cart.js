@@ -1,3 +1,11 @@
+// 🔐 Login check (ONLY for cart page)
+const user = localStorage.getItem("loggedInUser");
+
+if (!user) {
+  alert("Please login to view cart");
+  window.location.href = "login.html";
+}
+
 const cartContainer = document.getElementById("cartContainer");
 const totalAmount = document.getElementById("totalAmount");
 
@@ -57,3 +65,4 @@ function removeItem(index) {
 }
 
 renderCart();
+
