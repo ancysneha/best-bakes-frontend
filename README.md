@@ -4,7 +4,7 @@ Best Bakes is a responsive bakery website built using HTML, CSS, JavaScript, and
 It allows users to browse cakes, view details, add items to a cart, and see cart updates in real time.
 
 ## 🔗 Live Website
-👉 https://best-bakes.netlify.app
+👉 https://best-bakes-frontend.vercel.app/
 
 ## ✨ Features
 - Responsive design (mobile, tablet, desktop)
