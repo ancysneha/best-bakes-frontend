@@ -1,7 +1,4 @@
-if (!localStorage.getItem("isLoggedIn")) {
-  alert("Please login to view cart");
-  window.location.href = "login.html";
-}
+
 async function loadProducts() {
   const container = document.getElementById("productContainer");
 
@@ -81,4 +78,5 @@ alert("🎂 Added to cart!");
 }
 
 loadProducts();
+
 
