@@ -1,12 +1,16 @@
-function login() {
+function loginUser() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   if (email && password) {
-    localStorage.setItem("loggedIn", "true");
-    alert("Login Successful ✅");
-    window.location.href = "index.html";
+    // mark user as logged in
+    localStorage.setItem("isLoggedIn", "true");
+
+    // go to cart page after login
+    window.location.href = "cart.html";
   } else {
-    alert("Please enter details ❌");
+    alert("Please enter email and password");
   }
 }
+
+
