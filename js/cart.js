@@ -1,11 +1,3 @@
-// 🔐 Login check (ONLY for cart page)
-const user = localStorage.getItem("loggedInUser");
-
-if (!user) {
-  alert("Please login to view cart");
-  window.location.href = "login.html";
-}
-
 const cartContainer = document.getElementById("cartContainer");
 const totalAmount = document.getElementById("totalAmount");
 
@@ -27,18 +19,16 @@ function renderCart() {
 
     cartContainer.innerHTML += `
       <div class="cart-card">
-        <img src="${item.image}">
-        <div class="cart-info">
+        <img src="${item.image}" width="100">
+        <div>
           <h4>${item.name}</h4>
           <p>₹${item.price}</p>
 
-          <div>
-            <button class="qty-btn" onclick="changeQty(${index}, -1)">−</button>
-            <span>${item.qty}</span>
-            <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
-          </div>
+          <button onclick="changeQty(${index}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeQty(${index}, 1)">+</button>
 
-          <button onclick="removeItem(${index})">❌ Remove</button>
+          <button onclick="removeItem(${index})">Remove</button>
         </div>
       </div>
     `;
@@ -49,10 +39,7 @@ function renderCart() {
 
 function changeQty(index, change) {
   cart[index].qty += change;
-
-  if (cart[index].qty <= 0) {
-    cart.splice(index, 1);
-  }
+  if (cart[index].qty <= 0) cart.splice(index, 1);
 
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
@@ -65,4 +52,3 @@ function removeItem(index) {
 }
 
 renderCart();
-
