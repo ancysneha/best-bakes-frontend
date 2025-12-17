@@ -6,11 +6,13 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
   if (email && password) {
     localStorage.setItem("loggedInUser", email);
-    window.location.href = "cart.html";
+    window.location.href = "index.html";
+
   } else {
     alert("Invalid login");
   }
 });
+
 
 
 
