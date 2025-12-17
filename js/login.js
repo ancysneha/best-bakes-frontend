@@ -1,16 +1,16 @@
-function loginUser() {
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   if (email && password) {
-    // mark user as logged in
-    localStorage.setItem("isLoggedIn", "true");
-
-    // go to cart page after login
+    localStorage.setItem("loggedInUser", email);
     window.location.href = "cart.html";
   } else {
-    alert("Please enter email and password");
+    alert("Invalid login");
   }
-}
+});
+
 
 
