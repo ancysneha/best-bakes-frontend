@@ -107,7 +107,7 @@
             const statusDiv = document.getElementById("formStatus");
 
             try {
-                const res = await fetch("best-bakes-backend.onrender.com/api/contact", {
+                const res = await fetch("https://best-bakes-backend.onrender.com/api/contact", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name, email, phone, message })
@@ -130,3 +130,4 @@
     </script>
 </body>
 </html>
+
