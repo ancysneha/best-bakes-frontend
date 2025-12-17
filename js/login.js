@@ -1,4 +1,4 @@
-document.getElementById("loginForm").addEventListener("submit", function(e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value;
@@ -6,12 +6,15 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
   if (email && password) {
     localStorage.setItem("loggedInUser", email);
-    window.location.href = "index.html";
 
+    // 🔁 Go back to cart after login
+    window.location.href = "cart.html";
   } else {
-    alert("Invalid login");
+    alert("Please enter email & password");
   }
 });
+
+
 
 
 
