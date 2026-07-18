@@ -1,0 +1,40 @@
+
+  .contact-form-section {
+    margin-top: 50px;
+  }
+  
+  .contact-form label {
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  .contact-form .form-control {
+    background-color: #2b2b3d;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form .form-control:focus {
+    border-color: rgb(241, 6, 143);
+    box-shadow: 0 0 0 0.2rem rgba(241, 6, 143, 0.25);
+    background-color: #2b2b3d;
+    color: #fff;
+  }
+  
+  .btn-submit {
+    background-color: rgb(241, 6, 143);
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.4s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #fff;
+    color: rgb(241, 6, 143);
+    border: 1px solid rgb(241, 6, 143);
+  }

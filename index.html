@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Bakes</title>
+    <link rel="shortcut icon" type="image" href="./assets/image/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Pacifico&family=Qwigley&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="all-content">
+    
+        <nav class="navbar navbar-expand-md" id="navbar">
+            
+            <a class="navbar-brand" href="#" id="logo"><img src="./assets/image/logo.png" alt="logo" width="50px"> Best Bakes</a>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span><img src="./assets/image/menu.png" alt="" width="30px"></span>
+            </button>
+          
+            
+          <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+  <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="gallery.html">Gallery</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+    <li class="nav-item">
+  <a class="nav-link" href="login.html">Login</a>
+</li>
+
+
+
+
+    <!-- 🛒 CART -->
+    <li class="nav-item">
+      <a class="nav-link" href="cart.html">
+        Cart🛒 <span id="cartCount">(0)</span>
+      </a>
+    </li>
+
+
+  </ul>
+</div>
+</nav>
+        
+ <div class="home">
+            <div class="content" data-aos="zoom-out-right">
+                <h3 class="glitter-text" style="color:  rgb(238, 162, 215);">It's Best Bakes</h3>
+<h2 class="glitter-text" style="color:  rgb(238, 162, 215);">with best <span class="one">Cakes</span></h2>
+<h5><p class="glitter-text two" style="color:  rgb(223, 105, 187);">Pick the most delicious from the best of Best Bakes.</p></h5>
+
+   <a href="#product-cards" class="btn glitter-btn">Explore Our Cakes</a>
+
+
+            </div>
+            <div class="img"  data-aos="zoom-out-left">
+                  <img id="cakeSlider" width="300" src="./assets/image/background.png" alt="">
+            </div>
+        </div>
+      <!-- ===== BANNER SECTION ===== -->
+<div class="banner" data-aos="fade-up" data-aos-duration="1500">
+  <div class="content" data-aos="fade-right" data-aos-duration="1500">
+    <h3>Delicious Cake</h3>
+    <h2>UPTO 50% OFF</h2>
+    <p>Get the delicious cakes with the exciting offers.</p>
+
+    <div class="banner-buttons">
+      <div id="btnvideo">
+  <button onclick="location.href='story.html'">
+    Watch Our Story 🎥
+  </button>
+</div>
+
+    </div>
+  </div>
+
+  <div class="img" data-aos="fade-left" data-aos-duration="1500">
+    <img src="./assets/image/banner-background.png" alt="">
+  </div>
+</div>
+ 
+
+
+
+
+        
+
+
+
+        
+
+      
+       <section id="product-cards" data-aos="fade-up" data-aos-duration="1500">
+  <div class="container">
+      <h1>CAKES</h1>
+            <!-- <div class="row" style="margin-top:50px;">
+               <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./image/add.png" alt="" width="30px"></i></button>
+                    </div>
+                    <img src="./assets/image/c1.png" alt="">
+                    <div class="card-body">
+                        <h3>Cream Cake</h3>
+                        <div class="star">
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star "></i>
+                          <i class="bx bxs-star "></i>
+                        </div>
+                        <p>Soft vanilla base with whipped cream layers..</p>
+                        <h6>Rs.500 <span><button>Add Cart</button></span></h6>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                    </div>
+                    <img src="./assets/image/c2.png" alt="">
+                    <div class="card-body">
+                        <h3>Choco Cake</h3>
+                        <div class="star">
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star "></i>
+                          <i class="bx bxs-star "></i>
+                        </div>
+                        <p>Rich chocolate sponge with fudge topping.</p>
+                        <h6>Rs.150 <span><button>Add Cart</button></span></h6>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                    </div>
+                    <img src="./assets/image/c3.png" alt="">
+                    <div class="card-body">
+                        <h3>Slice Cake</h3>
+                        <div class="star">
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star "></i>
+                        </div>
+                        <p>Perfect portion with fruity, creamy filling.</p>
+                        <h6>Rs.130 <span><button>Add Cart</button></span></h6>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-3 py-3 py-md-0">
+                <div class="card">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                        <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                    </div>
+                    <img src="./assets/image/c4.png" alt="">
+                    <div class="card-body">
+                        <h3>Fruit Cake</h3>
+                        <div class="star">
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                          <i class="bx bxs-star checked"></i>
+                        </div>
+                        <p>Loaded with nuts, raisins, and love.</p>
+                        <h6>Rs.2050 <span><button>Add Cart</button></span></h6>
+                    </div>
+                </div>
+               </div>
+            </div>
+
+
+
+
+
+
+            <div class="row" style="margin-top:50px;"    data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="col-md-3 py-3 py-md-0">
+                 <div class="card">
+                     <div class="overlay">
+                         <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                     </div>
+                     <img src="./assets/image/c5.png" alt="">
+                     <div class="card-body">
+                         <h3>Brown Cake</h3>
+                         <div class="star">
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star "></i>
+                           <i class="bx bxs-star "></i>
+                         </div>
+                         <p>Moist cocoa delight with silky ganache.</p>
+                         <h6>Rs.500 <span><button>Add Cart</button></span></h6>
+                     </div>
+                 </div>
+                </div>
+                <div class="col-md-3 py-3 py-md-0">
+                 <div class="card">
+                     <div class="overlay">
+                         <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                     </div>
+                     <img src="./assets/image/c6.png" alt="">
+                     <div class="card-body">
+                         <h3>Slice Cake</h3>
+                         <div class="star">
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star "></i>
+                           <i class="bx bxs-star "></i>
+                         </div>
+                         <p>Baked fresh with a buttery aroma.</p>
+                         <h6>Rs.245<span><button>Add Cart</button></span></h6>
+                     </div>
+                 </div>
+                </div>
+                <div class="col-md-3 py-3 py-md-0">
+                 <div class="card">
+                     <div class="overlay">
+                         <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                     </div>
+                     <img src="./assets/image/c7.png" alt="">
+                     <div class="card-body">
+                         <h3>Fruit Cake</h3>
+                         <div class="star">
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star "></i>
+                         </div>
+                         <p>Decadent chocolate layers with truffle glaze.</p>
+                         <h6>Rs.1350 <span><button>Add Cart</button></span></h6>
+                     </div>
+                 </div>
+                </div>
+                <div class="col-md-3 py-3 py-md-0">
+                 <div class="card">
+                     <div class="overlay">
+                         <button type="button" class="btn btn-secondary" title="Quick View"><i><img src="./assets/image/views.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i><img src="./assets/image/heart.png" alt="" width="30px"></i></button>
+                         <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img src="./assets/image/add.png" alt="" width="30px"></i></button>
+                     </div>
+                     <img src="./assets/image/c8.png" alt="">
+                     <div class="card-body">
+                         <h3>Choco Cake</h3>
+                         <div class="star">
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                           <i class="bx bxs-star checked"></i>
+                         </div>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                         <h6>Rs.1200<span><button>Add Cart</button></span></h6>
+                     </div>
+                 </div>
+                </div>
+             </div>
+        </div> -->
+       
+      <div id="productContainer" class="row" style="margin-top:50px;"></div>
+  </div>
+</section>
+ 
+
+      
+
+
+      
+      <section id="gallery"    data-aos="fade-up"
+      data-aos-duration="1500">
+        <div class="container">
+            <h1>OUR GALLERY</h1>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Donuts</h3>
+                        </div>
+                        <img src="./assets/image/o1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Ice Cream</h3>
+                        </div>
+                        <img src="./assets/image/o2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Cup Cake</h3>
+                        </div>
+                        <img src="./assets/image/o3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top: 30px;"    data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Delicious Cake</h3>
+                        </div>
+                        <img src="./assets/image/o4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Chocolate Cake</h3>
+                        </div>
+                        <img src="./assets/image/o5.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">Slice Cake</h3>
+                        </div>
+                        <img src="./assets/image/o6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+
+
+
+      
+      <div class="container" id="about"    data-aos="fade-up"
+      data-aos-duration="1500">
+        <h1>ABOUT US</h1>
+        <div class="row">
+            <div class="col-md-6 py-3 py-md-0">
+              <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="./assets/image/about.png" alt="Front Image">
+    </div>
+    <div class="flip-card-back">
+      <img src="data:image/jpeg;base64,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" alt="Back Image">
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="col-md-6 py-3 py-md-0">
+                    <p>Welcome to Sweet Cravings – your one-stop destination for delicious, handcrafted cakes made with love and the finest ingredients. Whether you’re celebrating a birthday, wedding, anniversary, or just satisfying your sweet tooth, we create cakes that not only look beautiful but taste unforgettable. Our passionate bakers and decorators bring creativity and care into every layer, offering a wide range of flavors, styles, and custom designs to suit every occasion. At Sweet Cravings, we believe every celebration deserves a special treat – because happiness is homemade.All our cakes are freshly baked using high-quality ingredients, ensuring each bite is soft, rich, and absolutely irresistible. At Sweet Cravings, we don’t just bake cakes – we create edible art with a personal touch. Whether you’re ordering online or visiting us in person, your satisfaction is our top priority. Let us be part of your celebration, and make every moment a little sweeter!
+
+</p>                
+
+                <div id="bt"> <a href="about-more.html"><button>Read more</button></a></div>
+            </div>
+        </div>
+      </div>
+      
+
+
+    
+     <div class="container" id="contact" data-aos="fade-up" data-aos-duration="1500">
+  <h1>CONTACT US</h1>
+  <div class="row">
+    <div class="col-md-4 py-1 py-md-0">
+      <div class="form-group">
+        <input type="text" class="form-control" id="usr" placeholder="Name">
+      </div>
+    </div>
+    <div class="col-md-4 py-1 py-md-0">
+      <div class="form-group">
+        <input type="email" class="form-control" id="eml" placeholder="Email">
+      </div>
+    </div>
+    <div class="col-md-4 py-1 py-md-0">
+      <div class="form-group">
+        <input type="number" class="form-control" id="phn" placeholder="Phone">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+  </div>
+
+  <div id="messagebtn">
+    <button id="submitContact">Send Message</button>
+  </div>
+
+  <div id="contactStatus" style="margin-top:10px; color: green; font-weight: bold;"></div>
+</div>
+
+     
+
+      
+
+
+      
+      <footer id="footer"    data-aos="fade-up"
+      data-aos-duration="1500">
+        <h1 class="text-center">Best Bakes</h1>
+        <div class="icons text-center">
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-google"></i>
+            <i class="bx bxl-instagram"></i>
+        </div>
+        <div class="copyright text-center">
+            &copy; Copyright <strong>Best Bakes</strong> .All Rights Reserved
+        </div>
+        <div class="credite text-center">
+            Designed By <span style="color: rgb(240, 6, 169);">ANCY SNEHA<span></a>
+        </div>
+      </footer>
+      
+
+      <a href="#" class="arrow"><i><img src="./assets/image/up-arrow.png" alt="" width="50px"></i></a>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <script>
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      alert("🎂 Welcome to Best Bakes! Check out our latest cakes! 🍰");
+    }, 500); 
+  });
+</script>
+<script src="./cake.js"></script>
+<script>
+  function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cartCount").innerText = `(${cart.length})`;
+  }
+
+  updateCartCount();
+</script>
+<script>
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({ name, price, image });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+    alert("🎂 Added to cart!");
+  }
+</script>
+
+
+
+</body>
+</html>
